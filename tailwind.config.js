@@ -12,6 +12,16 @@ module.exports = {
         foreground: "var(--foreground)",
       },
     },
+    fontFamily: {
+      'sans': ['ui-sans-serif', 'system-ui', 'var(--font-sometype)'],
+      'serif': ['ui-serif', 'Georgia', "ogg", "Bodoni Moda", 'var(--font-cormorant)'],
+      // 'bodoniModa':["Bodoni Moda"],
+      // 'cormorant':["Cormorant","serif"],
+      // 'sometype':["Sometype","sans-serif"],
+      'mono': ['ui-monospace', 'SFMono-Regular'],
+      'display': ['Oswald',],
+      'body': ['"Open Sans"',],
+    }
   },
   plugins: [],
 };

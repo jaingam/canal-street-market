@@ -1,0 +1,27 @@
+@media (min-width:768px) {
+  .selected.navbar {
+    width: calc(100% - 180px);
+  }
+  .navbar {
+    display:block;
+    cursor: pointer;
+    height: 100%;
+    width: 60px;
+  }
+  main {
+    width:calc(100% - 180px);
+    display:block;
+  }
+}
+
+/* .selected.navbar {
+  width: calc(100% - 180px);
+}
+
+.navbar {
+
+  display: block;
+  cursor: pointer;
+  height: 100%;
+  width: 60px;
+} */
