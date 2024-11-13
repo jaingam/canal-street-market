@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./footer.css"
 import "../globals.css"
 import Link from "next/link";
-import { FontCormorant, FontSometype } from "../layout"
+import { FontCormorant, FontHankenGrotesk } from "../layout"
 import VendorCard from "./VendorCard"
 
 const Footer = (props) => {
@@ -18,12 +18,12 @@ const Footer = (props) => {
         <footer >
             <section className="p-[30px] md:p-[60px]">
                 <div className="slashed-border mb-[60px] p-[30px] md:p-[60px]">
-                    <h3 className={`${FontCormorant.variable} font-serif text-center text-2xl md:text-[45px] self-center w-full mb-[25px]`}>Interested in becoming a vendor?</h3>
-                    <a className={`button-with-normal-border ${FontSometype.variable}`} onClick={() => { setIsVendorCardPopUpVisible(true); }}>click here</a>
+                    <h3 className={`${FontCormorant.variable} font-serif leading-snug text-center text-2xl md:text-[45px] self-center w-full mb-[25px]`}>Interested in becoming a vendor?</h3>
+                    <a className={`button-with-normal-border ${FontHankenGrotesk.variable}`} onClick={() => { setIsVendorCardPopUpVisible(true); }}>click here</a>
                 </div>
                 <div className="grid md:grid-cols-3 md:grid-rows-1 gap-[30px] md:gap-[60px] mb-[60px] grid-cols-1 grid-rows-3">
                     <a href="mailto:info@canalstreet.market">
-                        <div className="dashed-all-side-border p-[30px] h-full" >
+                        <div className="dashed-all-side-border p-[30px] md:p-[55px] h-full flex flex-col justify-center" >
                             <svg className="mb-[15px] mx-auto" width="29px" height="29px" viewBox="0 0 29 29" version="1.1" xmlns="http://www.w3.org/2000/svg">
                                 <defs></defs>
                                 <g id="R2" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
@@ -36,13 +36,13 @@ const Footer = (props) => {
                                     </g>
                                 </g>
                             </svg>
-                            <p className={`w-full text-center ${FontSometype.variable}  text-sm`}>
+                            <p className={`w-full text-center ${FontHankenGrotesk.variable}  text-sm`}>
                                 Email us<br />
                             </p>
                         </div>
                     </a>
                     <a href="https://www.facebook.com/canalstreetmarket">
-                        <div className="dashed-all-side-border p-[30px]  h-full" >
+                        <div className="dashed-all-side-border p-[30px] md:p-[55px] h-full flex flex-col justify-center" >
                             <svg className="mb-[15px] mx-auto" width="18px" height="30px" viewBox="0 0 18 30" version="1.1" xmlns="http://www.w3.org/2000/svg">
                                 <defs></defs>
                                 <g id="R2" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
@@ -55,13 +55,13 @@ const Footer = (props) => {
                                     </g>
                                 </g>
                             </svg>
-                            <p className={`w-full text-center ${FontSometype.variable}  text-sm`}>
+                            <p className={`w-full text-center self-center ${FontHankenGrotesk.variable} text-sm`}>
                                 Follow us<br />on facebook<br />
                             </p>
                         </div>
                     </a>
                     <a href="https://www.instagram.com/canalstreetmarket/">
-                        <div className="dashed-all-side-border p-[30px]  h-full" >
+                        <div className="dashed-all-side-border p-[30px] md:p-[55px] h-full flex flex-col justify-center" >
                             <svg className="mb-[15px] mx-auto" width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg">
                                 <defs></defs>
                                 <g id="R2" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
@@ -76,7 +76,7 @@ const Footer = (props) => {
                                     </g>
                                 </g>
                             </svg>
-                            <p className={`w-full text-center ${FontSometype.variable} text-sm`}>
+                            <p className={`w-full text-center ${FontHankenGrotesk.variable} text-sm`}>
                                 Follow us<br />on instagram<br />
                             </p>
                         </div>
@@ -86,7 +86,7 @@ const Footer = (props) => {
                 <div className="dashed-all-side-border py-[30px] px-[30px] md:px-[60px] flex flex-col md:flex-row gap-[30px] justify-between items-center content-end" >
                     {!isSubscribed &&
                         <div className="md:mr-[60px] w-full max-w-[680px] items-center content-center">
-                            <span className={`text-[22px] ${FontSometype.variable} hidden md:block`}>Stay up to date with our newsletter</span>
+                            <span className={`text-[22px] ${FontHankenGrotesk.variable} hidden md:block`}>Stay up to date with our newsletter</span>
                              <svg className="mobile-only w-full mb-[15px]" width="33px" height="20px" viewBox="0 0 33 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
                                 <g id="WH_newer" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                                     <g id="375_HP_map-footer" transform="translate(-171.000000, -5586.000000)" fill="#000000" fillRule="nonzero">
@@ -96,19 +96,19 @@ const Footer = (props) => {
                                     </g>
                                 </g>
                             </svg>
-                            <p className={`mobile-only w-full text-[14px] ${FontSometype.variable} text-center`}>Get updates in your inbox</p>
+                            <p className={`mobile-only w-full text-[14px] ${FontHankenGrotesk.variable} text-center`}>Get updates in your inbox</p>
                            
 
                         </div>}
                     {isSubscribed && <p className="js-newsletter-success" style="visibility: inherit; opacity: 1;">Thanks!</p>}
                     {!isSubscribed && <form className="flex flex-row w-full max-w-[680px] border border-black py-[20px] px-[30px]" >
-                        <input type="email" placeholder="Email" className={`w-full ${FontSometype.variable} text-sm bg-transparent text-black placeholder-black`} />
-                        <input type="submit" onSubmit={() => { setIsSubscribed(true); }} />
+                        <input type="email" placeholder="Email" className={`w-full ${FontHankenGrotesk.variable} text-sm bg-transparent text-black placeholder-black`} />
+                        <button type="submit" onSubmit={() => { setIsSubscribed(true); }} className=" text-2xl">&#x21E2;</button>
                     </form>}
                 </div>
             </section>
 
-            <section className={`px-[30px] pb-[30px] md:px-[60px] md:pb-[60px] w-full text-[22px] ${FontSometype.variable}`}>
+            <section className={`px-[30px] pb-[30px] md:px-[60px] md:pb-[60px] w-full text-[22px] ${FontHankenGrotesk.variable}`}>
                 <div className="flex flex:row justify-between">
                     <div className="max-w-[620px] w-full flex flex:row  justify-between">
                         <p>Copyright Canal Street Market 2024</p>

@@ -13,7 +13,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      'sans': ['ui-sans-serif', 'system-ui', 'var(--font-sometype)'],
+      'sans': ['ui-sans-serif', 'system-ui', 'var(--font-hanken-grotesk)'],
       'serif': ['ui-serif', 'Georgia', "ogg", "Bodoni Moda", 'var(--font-cormorant)'],
       // 'bodoniModa':["Bodoni Moda"],
       // 'cormorant':["Cormorant","serif"],

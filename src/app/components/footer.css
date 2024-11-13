@@ -3,8 +3,8 @@
 
 .slashed-border{
 
-  background-image: repeating-linear-gradient(-74deg,rgba(0,0,0,.2),rgba(0,0,0,.2) 1px,transparent 0,transparent 4px);
+  background-image: repeating-linear-gradient(-74deg,rgba(0,0,0,.2),rgba(0,0,0,.2) 1px,transparent 0,transparent 4px),repeating-linear-gradient(-74deg,rgba(0,0,0,.2),rgba(0,0,0,.2) 1px,transparent 0,transparent 4px);
   background-size: 100% 12px,100% 12px;
   background-position: 0 0, 0 100%;
+  background-repeat: repeat-x,repeat-x;
 }
-

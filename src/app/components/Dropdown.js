@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./dropdown.css"
 import Image from "next/image";
 import Link from "next/link";
-import { FontCormorant, FontSometype } from "../layout"
+import { FontCormorant, FontHankenGrotesk } from "../layout"
 
 const Dropdown = (props) => {
 
@@ -12,7 +12,7 @@ const Dropdown = (props) => {
     const onSelect = (e) => {
         setSelected({ value: e.target.value });
     }
-    return <div className={isOpened ? `overflow-y-scroll ${FontSometype.variable} z-[1]` : `overflow-y-hidden ${FontSometype.variable}`}>
+    return <div className={isOpened ? `overflow-y-scroll ${FontHankenGrotesk.variable} z-[1]` : `overflow-y-hidden ${FontHankenGrotesk.variable}`}>
         <select name={props.name} className="dropdown-select hidden" onSelect={onSelect} value={selected.value}>
             {props.options.map((e) => {
                 <option value={e.value}>{e.text}</option>

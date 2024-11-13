@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "../globals.css"
 import Image from "next/image";
 import Link from "next/link";
-import { FontCormorant, FontSometype } from "../layout"
+import { FontCormorant, FontHankenGrotesk } from "../layout"
 import Dropdown from "./Dropdown";
 
 const VendorCard = (props) => {

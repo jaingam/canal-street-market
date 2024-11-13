@@ -2,15 +2,15 @@
 import React from "react";
 import localFont from "next/font/local";
 import "./globals.css";
-import Footer from "./components/Footer";
-
-import { Cormorant, Sometype_Mono } from 'next/font/google'
+import { Cormorant, Hanken_Grotesk } from 'next/font/google'
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Template from "./template";
 
-export const FontSometype = Sometype_Mono({
+export const FontHankenGrotesk = Hanken_Grotesk({
   weight: ["400"],
   subsets: ['latin'],
-  variable: '--font-sometype',
+  variable: '--font-hanken-grotesk',
 })
 export const FontCormorant = Cormorant({
   weight: ["300", "400"],
@@ -68,7 +68,10 @@ export default function RootLayout({ children }) {
       >
 
         <Navbar>
+        <Template>
           {children}
+
+        </Template>
 
           <Footer />
         </Navbar>

@@ -109,6 +109,23 @@ body {
   }
 }
 
+@keyframes fade-in {
+  from {
+    opacity: 0%;
+    visibility: hidden;
+  }
+
+  30% {
+    opacity: 0%;
+    visibility: hidden;
+
+  }
+  to {
+    opacity: 100%;
+    visibility: visible;
+  }
+}
+
 /*  */
 
 .dashed-all-side-border {
@@ -247,6 +264,9 @@ body {
 }
 
 
+.page-transition {
+  animation: fade-in .8s cubic-bezier(0.23, 1, 0.320, 1);
+}
 
 /* .dashed-horizontal-border-animation {
   position: relative;
