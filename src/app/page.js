@@ -1,10 +1,9 @@
-'use client'
-import React, { useState } from "react";
+
+import React from "react";
 import Image from "next/image";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
 import "./globals.css"
 import { FontCormorant, FontHankenGrotesk } from "./layout"
+import Link from "next/link";
 
 const NewMarketItem = (props) => {
   return <div className="w-full block">
@@ -28,7 +27,7 @@ const MarketEventItem = (props) => {
   return <div className={props.isFirstChild ?? false ? "market-event-item dashed-horizontal-border mx-[30px] px-5 py-[60px] md:m-0 md:p-0 flex flex-col items-center" :
     "market-event-item dashed-bottom-border mx-[30px] px-5 py-[60px] md:m-0 md:p-0 flex flex-col items-center"}>
     <span className={` text-xs text-center ${FontHankenGrotesk.variable} font-sans mb-[15px]`}>{props.date}</span>
-    <p className="text-center"><a href="/community/event/small-business-retail-pop-up-weekend" className={`${FontHankenGrotesk.variable} font-sans text-base text-center`}>{props.text}</a></p>
+    <p className="text-center"><Link href="/community/event/small-business-retail-pop-up-weekend" className={`${FontHankenGrotesk.variable} font-sans text-base text-center`}>{props.text}</Link></p>
   </div>
 }
 
@@ -103,16 +102,16 @@ export default function Home(props) {
 
           </div>
         </div>
-        <a href="/community/event/" className={`button-with-normal-border bg-white mt-[60px] md:mt-0 md:w-[180px] md:relative bottom-[42px] ${FontHankenGrotesk.variable} font-sans`}>see all</a>
+        <Link href="/community/event/" className={`button-with-normal-border bg-white mt-[60px] md:mt-0 md:w-[180px] md:relative bottom-[42px] ${FontHankenGrotesk.variable} font-sans`}>see all</Link>
 
       </section>
       <section className="px-[30px] md:mb-3 md:px-[60px] md:grid md:grid-cols-2 gap-[60px]">
-        <a href="https://www.google.com/maps/place/265+Canal+St,+New+York,+NY+10013/@40.7190077,-74.0030314,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2598a1c3945dd:0x6b44c616961ec727!8m2!3d40.7190077!4d-74.0008427" >
+        <Link href="https://www.google.com/maps/place/265+Canal+St,+New+York,+NY+10013/@40.7190077,-74.0030314,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2598a1c3945dd:0x6b44c616961ec727!8m2!3d40.7190077!4d-74.0008427" >
           <div className="dashed-all-side-border py-[60px] px-[30px] md:py-24 content-center w-full">
             <h3 className={`${FontCormorant.variable} font-serif md:max-w-[385px] text-center text-6xl self-center w-full m-auto`}>265 Canal<br /> St. New York, NY</h3>
           </div>
-        </a>
-        <a href="https://www.google.com/maps/place/265+Canal+St,+New+York,+NY+10013/@40.7190077,-74.0030314,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2598a1c3945dd:0x6b44c616961ec727!8m2!3d40.7190077!4d-74.0008427"
+        </Link>
+        <Link href="https://www.google.com/maps/place/265+Canal+St,+New+York,+NY+10013/@40.7190077,-74.0030314,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2598a1c3945dd:0x6b44c616961ec727!8m2!3d40.7190077!4d-74.0008427"
           className="h-0 md:h-full">
           <div className="dashed-all-side-border h-0 md:h-[calc(100%-2px)] p-[1px]">
             <Image className="dashed-all-side-border object-cover h-0 md:h-full" width={1080} height={606}
@@ -121,7 +120,7 @@ export default function Home(props) {
               sizes="(max-width: 768px) calc(100%-2px), 0px" />
 
           </div>
-        </a>
+        </Link>
       </section>
     </div>
   );

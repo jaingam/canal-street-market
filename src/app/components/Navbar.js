@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from 'next/navigation'
 import { FontCormorant, FontHankenGrotesk } from "../layout"
+import NavItem from "./NavItem";
 
 const Navbar = (props, children) => {
     const [isMobileNavbarVisible, setIsMobileNavbarVisible] = useState(false);
@@ -54,7 +55,7 @@ const Navbar = (props, children) => {
                     </Link>
                 </div>
                 <div className="block bg-white p-[30px]">
-                    <a href="/community/event/" className={`button-with-normal-border bg-white mb-[30px] md:w-[180px] font-sans`}>become a vendor</a>
+                    <Link href="/community/event/" className={`button-with-normal-border bg-white mb-[30px] md:w-[180px] font-sans`}>become a vendor</Link>
                     <div >
                         <p>265 Canal Street<br />
                             New York, New York</p>
@@ -74,33 +75,33 @@ const Navbar = (props, children) => {
         </button>
 
         <header className="w-full h-0 hidden md:block ">
-            <nav className="fixed h-full w-full hidden md:flex md:flex-row">
-                <Link href={"/"} className={index == 0 ? "selected navbar" : "navbar"}>
-                    <div className={index !== 0 ? " bg-white cursor-pointer w-full h-full py-[60px] px-[5px]" : "hidden invisible md:block md:w-[60px]  py-[60px] px-[5px]"}>{ }</div>
-                </Link>
-                <Link href={"/food"} className={index == 1 ? "selected navbar" : "navbar"}>
-                    <div className={index !== 1 ? " bg-[#5ea3ec] cursor-pointer w-full h-full relative py-[60px] px-[5px]" : "hidden invisible md:block md:w-[60px]  py-[60px] px-[5px]"}>
+            <div className="fixed h-full w-full hidden md:flex md:flex-row pointer-events-none">
+                <NavItem href={"/"} className={index == 0 ? "selected navbar pointer-events-none" : "navbar pointer-events-auto"}>
+                    <div className={index !== 0 ? " bg-white cursor-pointer w-full h-full py-[60px] px-[5px]" : "w-0 hidden invisible md:block md:w-[60px]  py-[60px] px-[5px]"}>{ }</div>
+                </NavItem>
+                <NavItem href={"/food"} className={index == 1 ? "selected navbar pointer-events-none" : "navbar pointer-events-auto"}>
+                    <div className={index !== 1 ? " bg-[#5ea3ec] cursor-pointer w-full h-full relative py-[60px] px-[5px]" : "w-0 hidden invisible md:block md:w-[60px]  py-[60px] px-[5px]"}>
                         <p className=" pt-4 text-center text-xl">餐饮</p>
-                   
+
                         <span className="absolute origin-center rotate-90 top-1/2 text-xl">Food</span>
 
                     </div>
-                </Link>
-                <Link href={"/retail"} className={index == 2 ? "selected navbar" : "navbar"}>
-                    <div className={index !== 2 ? " bg-[#f64444] cursor-pointer w-full h-full relative  py-[60px] px-[5px]" : "hidden invisible md:block md:w-[60px]  py-[60px] px-[5px]"}>
+                </NavItem>
+                <NavItem href={"/retail"} className={index == 2 ? "selected navbar pointer-events-none" : "navbar pointer-events-auto"}>
+                    <div className={index !== 2 ? " bg-[#f64444] cursor-pointer w-full h-full relative  py-[60px] px-[5px]" : "w-0 hidden invisible md:block md:w-[60px]  py-[60px] px-[5px]"}>
                         <p className=" pt-4 text-center text-xl">購物</p>
                         <span className="absolute origin-center rotate-90 top-1/2  text-xl">Retail</span>
 
                     </div>
-                </Link>
-                <Link href={"/community"} className={index == 3 ? "selected navbar" : "navbar"}>
-                    <div className={index !== 3 ? " bg-[#ffb400] cursor-pointer w-full h-full relative py-[60px] px-[5px]" : "hidden invisible md:block md:w-[60px]  py-[60px] px-[5px]"}>
+                </NavItem>
+                <NavItem href={"/community"} className={index == 3 ? "selected navbar pointer-events-none" : "navbar pointer-events-auto"}>
+                    <div className={index !== 3 ? " bg-[#ffb400] cursor-pointer w-full h-full relative py-[60px] px-[5px]" : "w-0 hidden invisible md:block md:w-[60px]  py-[60px] px-[5px]"}>
                         <p className=" pt-4 text-center text-xl">文化</p>
                         <span className="absolute origin-center rotate-90 top-1/2 left-1/2 -translate-x-[50%] text-xl">Community</span>
 
                     </div>
-                </Link>
-            </nav>
+                </NavItem>
+            </div>
         </header>
         <main className={index === 0 ? `md:ml-0` :
             index === 1 ? ` md:ml-[60px]` :

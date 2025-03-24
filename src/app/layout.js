@@ -70,9 +70,7 @@ export default function RootLayout({ children }) {
         <Navbar>
         <Template>
           {children}
-
         </Template>
-
           <Footer />
         </Navbar>
       </body>
